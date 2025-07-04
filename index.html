@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FidelizApp - O seu app de cartões de fidelidade digital</title>
+    <meta name="description" content="Diga adeus às cartelas de papel! Com o Fideliza, comerciantes criam campanhas de fidelidade digitais e clientes juntam selos para ganhar recompensas, tudo no celular.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B21A8 0%, #A855F7 100%);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ===== Header ===== -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-700"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                <span class="text-2xl font-bold text-gray-800">FidelizApp</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#clientes" class="text-gray-600 hover:text-purple-700 transition-colors">Para Clientes</a>
+                <a href="#comerciantes" class="text-gray-600 hover:text-purple-700 transition-colors">Para Comerciantes</a>
+                <a href="#como-funciona" class="text-gray-600 hover:text-purple-700 transition-colors">Como Funciona</a>
+            </nav>
+            <a href="#download" class="hidden md:inline-block bg-purple-700 text-white font-semibold px-5 py-2 rounded-lg hover:bg-purple-800 transition-transform transform hover:scale-105">
+                Baixar o App
+            </a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#clientes" class="block py-2 text-gray-600 hover:text-purple-700">Para Clientes</a>
+            <a href="#comerciantes" class="block py-2 text-gray-600 hover:text-purple-700">Para Comerciantes</a>
+            <a href="#como-funciona" class="block py-2 text-gray-600 hover:text-purple-700">Como Funciona</a>
+            <a href="#download" class="block mt-4 bg-purple-700 text-white font-semibold text-center px-5 py-2 rounded-lg hover:bg-purple-800">
+                Baixar o App
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Hero Section ===== -->
+        <section class="gradient-bg pt-32 pb-20 text-white overflow-hidden">
+            <div class="container mx-auto px-6 text-center relative">
+                <div class="absolute -top-20 -left-40 w-96 h-96 bg-white/10 rounded-full animate-pulse"></div>
+                <div class="absolute -bottom-20 -right-40 w-96 h-96 bg-white/10 rounded-full animate-pulse delay-500"></div>
+                
+                <div class="relative z-10">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">A sua carteira de fidelidade, agora digital.</h1>
+                    <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-purple-200">
+                        Para clientes, o fim das cartelas de papel. Para comerciantes, a maneira mais simples de criar campanhas e reter clientes.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                        <a href="#comerciantes" class="w-full sm:w-auto bg-white text-purple-700 font-bold px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-transform transform hover:scale-105">Sou Comerciante</a>
+                        <a href="#clientes" class="w-full sm:w-auto bg-purple-500/50 text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-purple-500/80 transition-transform transform hover:scale-105">Sou Cliente</a>
+                    </div>
+                    
+                    <div class="relative flex justify-center items-center">
+                        <img src="https://placehold.co/300x600/FFFFFF/6B21A8?text=App+Fideliza\n(Cliente)" 
+                             alt="[Imagem da interface do cliente no aplicativo Fideliza]" 
+                             class="rounded-3xl shadow-2xl transform rotate-[-5deg] transition-transform hover:rotate-[-8deg] hover:scale-105"
+                             onerror="this.onerror=null;this.src='https://placehold.co/300x600';">
+                        <img src="https://placehold.co/300x600/1E1B4B/FFFFFF?text=App+Fideliza\n(Comerciante)" 
+                             alt="[Imagem da interface do comerciante no aplicativo Fideliza]" 
+                             class="hidden sm:block rounded-3xl shadow-2xl transform rotate-[5deg] transition-transform hover:rotate-[8deg] hover:scale-105 z-10 -ml-16"
+                             onerror="this.onerror=null;this.src='https://placehold.co/300x600';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Para Clientes Section ===== -->
+        <section id="clientes" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <span class="text-purple-700 font-semibold">PARA CLIENTES</span>
+                        <h2 class="text-3xl md:text-4xl font-bold my-4">Diga adeus às cartelas de papel.</h2>
+                        <p class="text-gray-600 mb-8 text-lg">
+                            Centralize todos os seus cartões de fidelidade em um único lugar, descubra novos estabelecimentos e nunca mais perca uma recompensa.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="wallet" class="w-6 h-6 text-purple-700 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-semibold">Carteira Digital</h3>
+                                    <p class="text-gray-600">Todos os seus cartões de fidelidade organizados no seu celular.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="gift" class="w-6 h-6 text-purple-700 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-semibold">Recompensas Garantidas</h3>
+                                    <p class="text-gray-600">Seu progresso é salvo na nuvem. Esqueceu o celular? Sem problemas!</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="compass" class="w-6 h-6 text-purple-700 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-semibold">Descubra Lugares Novos</h3>
+                                    <p class="text-gray-600">Explore comércios locais que oferecem programas de fidelidade.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://placehold.co/350x700/FFFFFF/6B21A8?text=Minhas+Cartelas" 
+                             alt="[Imagem da tela 'Minhas Cartelas' do aplicativo Fideliza]" 
+                             class="rounded-3xl shadow-xl"
+                             onerror="this.onerror=null;this.src='https://placehold.co/350x700';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Para Comerciantes Section ===== -->
+        <section id="comerciantes" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="flex justify-center order-last md:order-first">
+                        <img src="https://placehold.co/350x700/1E1B4B/FFFFFF?text=Painel+do\nComerciante" 
+                             alt="[Imagem do painel do comerciante no aplicativo Fideliza]" 
+                             class="rounded-3xl shadow-xl"
+                             onerror="this.onerror=null;this.src='https://placehold.co/350x700';">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <span class="text-purple-700 font-semibold">PARA COMERCIANTES</span>
+                        <h2 class="text-3xl md:text-4xl font-bold my-4">Crie campanhas de fidelidade em minutos.</h2>
+                        <p class="text-gray-600 mb-8 text-lg">
+                            Aumente a retenção de clientes com uma ferramenta digital, segura e incrivelmente fácil de usar.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="rocket" class="w-6 h-6 text-purple-700 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-semibold">Criação Rápida</h3>
+                                    <p class="text-gray-600">Lance uma nova campanha de fidelidade em menos de 2 minutos.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-purple-700 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-semibold">Validação Segura</h3>
+                                    <p class="text-gray-600">Use QR Codes únicos para validar selos e recompensas sem fraudes.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="bar-chart-3" class="w-6 h-6 text-purple-700 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-semibold">Aumente o Engajamento</h3>
+                                    <p class="text-gray-600">Incentive seus clientes a voltarem mais vezes ao seu estabelecimento.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Como Funciona Section ===== -->
+        <section id="como-funciona" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Simples, rápido e eficiente.</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-lg">Em apenas 3 passos, a fidelidade acontece.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="bg-purple-100 text-purple-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="users" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">1. Participe</h3>
+                        <p class="text-gray-600">O cliente descobre sua campanha no app e decide participar com um único clique.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="bg-purple-100 text-purple-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="qr-code" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">2. Escaneie</h3>
+                        <p class="text-gray-600">Após o consumo, o comerciante gera um QR Code e o cliente escaneia para ganhar seu selo.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="bg-purple-100 text-purple-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="trophy" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">3. Ganhe</h3>
+                        <p class="text-gray-600">Ao completar a cartela, o cliente resgata a recompensa de forma segura e digital.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Download/CTA Section ===== -->
+        <section id="download" class="gradient-bg">
+            <div class="container mx-auto px-6 py-20 text-center text-white">
+                <h2 class="text-4xl font-bold mb-4">Pronto para começar?</h2>
+                <p class="text-lg text-purple-200 mb-8 max-w-xl mx-auto">Baixe o FidelizApp agora e transforme a maneira como você interage com seus estabelecimentos favoritos.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="#" class="flex items-center justify-center gap-3 bg-white text-gray-800 font-semibold px-6 py-4 rounded-lg w-60 hover:bg-gray-200 transition-colors">
+                        <img src="https://placehold.co/32x32/000000/FFFFFF?text=A" alt="[Logo da Apple App Store]">
+                        <div>
+                            <span class="block text-xs">Baixar na</span>
+                            <span class="block text-lg -mt-1">App Store</span>
+                        </div>
+                    </a>
+                    <a href="#" class="flex items-center justify-center gap-3 bg-white text-gray-800 font-semibold px-6 py-4 rounded-lg w-60 hover:bg-gray-200 transition-colors">
+                        <img src="https://placehold.co/32x32/000000/FFFFFF?text=G" alt="[Logo da Google Play Store]">
+                        <div>
+                            <span class="block text-xs">Disponível no</span>
+                            <span class="block text-lg -mt-1">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-gray-800 text-gray-400">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-xl font-bold text-white">FidelizApp</a>
+                </div>
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#clientes" class="hover:text-white">Clientes</a>
+                    <a href="#comerciantes" class="hover:text-white">Comerciantes</a>
+                    <a href="#como-funciona" class="hover:text-white">Como Funciona</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook" class="w-6 h-6 hover:text-white"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram" class="w-6 h-6 hover:text-white"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter" class="w-6 h-6 hover:text-white"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-8 border-t border-gray-700 pt-6">
+                <p>&copy; 2025 FidelizApp. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
